@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="favicon.ico?v=2">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv=“Pragma” content=”no-cache”>
+  <meta http-equiv=“Expires” content=”-1″>
+  <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Cony's Kitchen</title>
+</head>
+
+<body>
+      <img style="width: 100%" src="images/kitchen.png">
+      <div class="jumbotron" style="text-align: center">
+        <h1 class="display-3" >Cony's Kitchen 🥘</h1>
+        <p class="lead">Welcome! You can query a recipe at Cony's kitchen! </p>
+      </div>
+      <h2 style="text-align: center">Recipe Search by Ingredients 🍕 🥪 🥙</h2>
+
+    <div class="section-description" style="text-align: center">
+          <p class="section-subheading">
+            <form id="query-form">
+              <div>
+                <label class="col-form-label" for="ingredients">Ingredients (commas seperated):</label>
+                <input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g. beef, potato (optional)" onChange="sanitizeInputs()" />
+              </div>
+              <div>
+                <label class="col-form-label" for="contains">Dish Name Contains (no commas):</label
+                ><input class="textfield" id="contains" type="text" name="contains" placeholder="e.g. spaghetti (optional)" onChange="sanitizeInputs()" /></div>
+              <div class="button">
+                <br />
+                <input class="btn btn-secondary" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
+                <input class="btn btn-info" type="submit" value="Search ..." id="searchButton" />
+              </div>
+            </form>
+          </p>
+                <div class="section-subheading" id="search-results-heading"></div>
+                <div class="results-div" id="results"></div>
+    </div>
+</body>
+
+
+      <footer style="text-align: center">
+        <p><code class="text-warning">Search powered by 😝
+          <a href="http://www.recipepuppy.com/about/api/" target= "_blank">Recipe</a>
+        </code></p>
+      </footer>
+
+      <!-- JQuery Scripts -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <!-- Our codes -->
+      <script src="js/kitchen.js?v=1"></script>
+
+</html>
